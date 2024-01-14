@@ -18,5 +18,9 @@ app.get('/api/bikes', async (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-module.exports = app;
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
+
+// Removed the incorrect module.exports = app; and }); line
